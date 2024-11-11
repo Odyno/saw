@@ -8,7 +8,7 @@ version = "0.0.1"
 description = "SAW"
 authors = ["Alessandro Staniscia"]
 readme = "Readme.md"
-repository = "git@github.com:Odyno/saw.git"
+repository = "https://github.com/Odyno/saw.git"
 license = "MIT"
 
 packages = [
