@@ -1,0 +1,27 @@
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "saw"
+version = "0.0.1"
+description = "SAW"
+authors = ["Alessandro Staniscia"]
+readme = "Readme.md"
+repository = "git@github.com:Odyno/saw.git"
+license = "MIT"
+
+packages = [
+    { include = "saw" }
+]
+
+[tool.autopep8]
+max_line_length = 0
+
+[tool.poetry.scripts]
+ad_manager = 'saw.cli:main'
+
+[tool.poetry.dependencies]
+python = "^3.9"
+python-dotenv = "^1.0.0"
+
