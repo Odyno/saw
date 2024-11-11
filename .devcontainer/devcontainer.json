@@ -1,0 +1,34 @@
+{
+    "name": "LocalEnv",
+    "build": {
+        "dockerfile": "../environments/Dockerfile",
+        "context": ".."
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "ms-python.debugpy",
+                "SonarSource.sonarlint-vscode",
+                "donjayamanne.python-extension-pack",
+                "ms-python.autopep8"
+            ],
+            "settings": {
+                "python.pythonPath": "/usr/local/bin/python3",
+                "editor.formatOnSave": true,
+                {
+                    "python.formatting.provider": "autopep8",
+                    "python.formatting.autopep8Args": [
+                        "--max-line-length",
+                        "0"
+                    ]
+                }
+            }
+        }
+    },
+    "postCreateCommand": "pip install -r requirements.txt",
+    "forwardPorts": [
+        8000,
+        3000
+    ]
+}
